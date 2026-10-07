@@ -1,9 +1,9 @@
-# Algorithms
+# Code
 
-Algorithm descriptions, steps, and worked examples for the classical encryption ciphers covered in this course.
+Implementations of the course ciphers, grouped by algorithm.
 
 ## Ciphers
 
-- [Caesar Cipher](Caesar-Cipher/)
-- [Vigenere Cipher](Vigenere-Cipher/)
-- [Playfair Cipher](Playfair-Cipher/)
+- [Caesar](Caesar/)
+- [Vigenere](Vigenere/)
+- [Playfair](Playfair/)
