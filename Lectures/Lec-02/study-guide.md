@@ -1,7 +1,5 @@
-# Lecture 02
+# Lecture 02 Study Guide
 
-Lecture-derived notes have not yet been transcribed or verified against the source scan. No additional lecture topics are inferred here.
-
-Source: [Lecture 02 scan](source/Lec-02.pdf).
+No supplementary study material has been added yet. Review and verify the [Lecture 02 source scan](source/Lec-02.pdf) before adding notes or practice.
 
 Related material: [Playfair algorithm notes](../../Algorithms/Playfair/notes.md), [Playfair code](../../Code/Playfair-Cipher/README.md), [Playfair problems](../../Problems/Playfair/README.md), and [Playfair solutions](../../Solutions/Playfair/README.md).
