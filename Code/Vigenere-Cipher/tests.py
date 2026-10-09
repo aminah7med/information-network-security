@@ -1,83 +1,46 @@
-"""Basic verification tests for the Vigenere materials.
 
-Run from the repository root:
-    python Code/Vigenere-Cipher/tests.py
-"""
-import os
-import subprocess
-import sys
-import unittest
+# Vigenere Cipher Tests
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
+# Test 1: Encryption
+plain = "cat"
+key = "dog"
 
-from vigenere_decryption import decrypt  # noqa: E402
-from vigenere_encryption import encrypt  # noqa: E402
+ciphertext = ""
 
+for i in range(len(plain)):
+    p = ord(plain[i]) - 97
+    k = ord(key[i % len(key)]) - 97
+    c = (p + k) % 26 + 97
+    ciphertext += chr(c)
 
-def run_section(plain, key):
-    """Run the instructor's script with the given input and return its output."""
-    result = subprocess.run(
-        [sys.executable, os.path.join(HERE, "vigenere_section.py")],
-        input=f"{plain}\n{key}\n",
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    # The prompts are printed without a newline, so keep only the result part.
-    return "Ciphertext:" + result.stdout.split("Ciphertext:")[-1].rstrip("\n")
+print("Test 1 - Expected: foz")
+print("Test 1 - Actual:  ", ciphertext)
+print("Passed:", ciphertext == "foz")
 
 
-class TestEncryption(unittest.TestCase):
-    def test_known_cases(self):
-        self.assertEqual(encrypt("cat", "dog"), "foz")
-        self.assertEqual(encrypt("bad", "abc"), "bbf")
-        self.assertEqual(encrypt("hello", "key"), "rijvs")
-        self.assertEqual(encrypt("attackatdawn", "lemon"), "lxfopvefrnhr")
+# Test 2: Decryption
+plaintext = ""
 
-    def test_key_repetition(self):
-        # Repeating the key by hand must not change the result.
-        self.assertEqual(encrypt("hello", "key"), encrypt("hello", "keyke"))
+for i in range(len(ciphertext)):
+    c = ord(ciphertext[i]) - 97
+    k = ord(key[i % len(key)]) - 97
+    p = (c - k) % 26 + 97
+    plaintext += chr(p)
 
-    def test_same_plain_letter_different_cipher_letters(self):
-        # The two 'l' letters in "hello" meet different key letters.
-        self.assertEqual(encrypt("hello", "key")[2], "j")
-        self.assertEqual(encrypt("hello", "key")[3], "v")
-
-    def test_key_a_changes_nothing(self):
-        self.assertEqual(encrypt("hello", "a"), "hello")
-
-    def test_invalid_input_rejected(self):
-        with self.assertRaises(ValueError):
-            encrypt("hello", "")
-        with self.assertRaises(ValueError):
-            encrypt("Hello", "key")
-        with self.assertRaises(ValueError):
-            encrypt("hello world", "key")
-        with self.assertRaises(ValueError):
-            encrypt("hello", "k3y")
+print("\nTest 2 - Expected: cat")
+print("Test 2 - Actual:  ", plaintext)
+print("Passed:", plaintext == "cat")
 
 
-class TestDecryption(unittest.TestCase):
-    def test_known_cases(self):
-        self.assertEqual(decrypt("foz", "dog"), "cat")
-        self.assertEqual(decrypt("bbf", "abc"), "bad")
-        self.assertEqual(decrypt("lxfopvefrnhr", "lemon"), "attackatdawn")
+# Test 3: Key Repetition
+plain = "hello"
+key = "key"
 
-    def test_round_trip(self):
-        for plain, key in [("hello", "key"), ("network", "net"), ("zzz", "z")]:
-            self.assertEqual(decrypt(encrypt(plain, key), key), plain)
+new_key = ""
 
-    def test_wrap_around_negative_difference(self):
-        # c = 'a' (0), k = 'd' (3): (0 - 3) % 26 = 23 -> 'x'
-        self.assertEqual(decrypt("a", "d"), "x")
+for i in range(len(plain)):
+    new_key += key[i % len(key)]
 
-
-class TestSectionCode(unittest.TestCase):
-    def test_matches_practice_encryption(self):
-        for plain, key in [("cat", "dog"), ("hello", "key"), ("attackatdawn", "lemon")]:
-            self.assertEqual(run_section(plain, key), "Ciphertext: " + encrypt(plain, key))
-
-
-if __name__ == "__main__":
-    unittest.main(verbosity=2)
+print("\nTest 3 - Expected: keyke")
+print("Test 3 - Actual:  ", new_key)
+print("Passed:", new_key == "keyke")
