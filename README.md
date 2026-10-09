@@ -10,7 +10,7 @@ The goal is to make lecture notes, classical encryption algorithms, code example
 
 All materials are organized for educational purposes. This repository represents a personal effort and may contain mistakes or incomplete information. Please refer to the official course materials and your instructor's guidance whenever clarification is needed.
 
-**Course under the supervision of Dr. Asmaa Mahmoud.**
+**Course under the supervision of Dr. Asmaa Aahmoud.**
 
 ## How to Download and Use This Repository
 
