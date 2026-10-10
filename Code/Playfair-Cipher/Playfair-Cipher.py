@@ -1,5 +1,6 @@
 keyword = input("Enter your keyword: ").lower()
 alphabet = "abcdefghiklmnopqrstuvwxyz"
+matrix = []
 
 def find_position(matrix, char):
     for row in range(5):
@@ -31,6 +32,19 @@ def encrypt_pair(matrix, first, second):
 
     return encrypted_first + encrypted_second
 
+plaintext = input("Enter your plaintext: ").lower()
+plaintext = plaintext.replace("j", "i")
+
+ciphertext = ""
+
+for i in range(0, len(plaintext), 2):
+    first = plaintext[i]
+    second = plaintext[i + 1]
+
+    ciphertext += encrypt_pair(matrix, first, second)
+
+print("Ciphertext:", ciphertext)
+
 matrix_letters = ""
 
 # Add keyword letters first
@@ -44,7 +58,6 @@ for char in alphabet:
         matrix_letters += char
 
 # Build the 5x5 matrix
-matrix = []
 
 for i in range(0, 25, 5):
     row = matrix_letters[i:i+5]
