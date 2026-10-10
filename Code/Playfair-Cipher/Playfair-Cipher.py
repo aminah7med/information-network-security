@@ -1,6 +1,12 @@
 keyword = input("Enter your keyword: ").lower()
 alphabet = "abcdefghiklmnopqrstuvwxyz"
 
+def find_position(matrix, char):
+    for row in range(5):
+        for col in range(5):
+            if matrix[row][col] == char:
+                return row, col
+            
 matrix_letters = ""
 
 # Add keyword letters first
@@ -19,11 +25,5 @@ matrix = []
 for i in range(0, 25, 5):
     row = matrix_letters[i:i+5]
     matrix.append(row)
-    
-# matrix = []
-
-# for i in range(0, 25, 5):
-#     row = matrix_letters[i:i+5]
-#     matrix.append(row)
     
 print(matrix)
