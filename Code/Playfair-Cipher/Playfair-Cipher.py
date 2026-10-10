@@ -7,6 +7,30 @@ def find_position(matrix, char):
             if matrix[row][col] == char:
                 return row, col
             
+def encrypt_pair(matrix, first, second):
+    row1, col1 = find_position(matrix, first)
+    row2, col2 = find_position(matrix, second)
+
+    if row1 == row2:
+        col1 = (col1 + 1) % 5
+        col2 = (col2 + 1) % 5
+
+        encrypted_first = matrix[row1][col1]
+        encrypted_second = matrix[row2][col2]
+
+    elif col1 == col2:
+        row1 = (row1 + 1) % 5
+        row2 = (row2 + 1) % 5
+
+        encrypted_first = matrix[row1][col1]
+        encrypted_second = matrix[row2][col2]
+
+    else:
+        encrypted_first = matrix[row1][col2]
+        encrypted_second = matrix[row2][col1]
+
+    return encrypted_first + encrypted_second
+
 matrix_letters = ""
 
 # Add keyword letters first
