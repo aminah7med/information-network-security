@@ -1,11 +1,6 @@
-# Vigenere Cipher Code
-
-No implementation has been added yet. Add code only after the course requirements and algorithm behavior are verified.
-
-Related: [algorithm](../../Algorithms/Vigenere/notes.md), [problems](../../Problems/Vigenere/README.md), and [solutions](../../Solutions/Vigenere/README.md).
 # Vigenère Cipher — Code
 
-This page explains how to read, run, test, and practice the Vigenère code. The theory is in the [algorithm overview](../../Algorithms/Vigenere/README.md).
+This page explains how to read, run, test, and practice the Vigenère code. The theory is in the [algorithm notes](../../Algorithms/Vigenere/notes.md).
 
 ## A. Directory Guide
 
@@ -153,7 +148,7 @@ Examples are in the [study guide](../../Algorithms/Vigenere/study-guide.md#limit
 
 ## I. Further Reading
 
-- [Algorithm overview](../../Algorithms/Vigenere/README.md)
+- [Algorithm notes](../../Algorithms/Vigenere/notes.md)
 - [Lecture notes](../../Algorithms/Vigenere/notes.md)
 - [Study guide](../../Algorithms/Vigenere/study-guide.md)
 - [Practice problems](../../Problems/Vigenere/README.md)

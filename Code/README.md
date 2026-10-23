@@ -1,6 +1,6 @@
 # Code
 
-Implementations and tests for course ciphers. No implementation is present in a cipher folder until its files are added.
+Implementations and tests for course ciphers. Each cipher folder contains the files currently available for that algorithm.
 
 ## Ciphers
 
