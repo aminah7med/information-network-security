@@ -29,6 +29,8 @@ Algorithms/
 │   └── README.md
 ├── Playfair/
 │   └── notes.md
+├── Rail-Fence/
+│   └── README.md
 └── Vigenere/
     ├── notes.md
     └── study-guide.md
@@ -47,6 +49,10 @@ Code/
 ├── Playfair-Cipher/
 │   ├── README.md
 │   └── Playfair-Cipher.py
+├── Rail-Fence-Cipher/
+│   ├── rail_fence_encryption.py
+│   ├── rail_fence_decryption.py
+│   └── tests.py
 └── Vigenere-Cipher/
     ├── README.md
     ├── vigenere_section.py
@@ -87,6 +93,7 @@ currently a Hill problem or solution folder.
 | Vigenère Cipher | [Algorithm notes](Algorithms/Vigenere/notes.md) · [Study guide](Algorithms/Vigenere/study-guide.md) | [Interactive example](Code/Vigenere-Cipher/vigenere_section.py) · [Encryption function](Code/Vigenere-Cipher/vigenere_encryption.py) · [Decryption function](Code/Vigenere-Cipher/vigenere_decryption.py) | [Console checks](Code/Vigenere-Cipher/tests.py) |
 | Playfair Cipher | [Algorithm notes](Algorithms/Playfair/notes.md) | [Encryption script](Code/Playfair-Cipher/Playfair-Cipher.py) | No test file is currently provided |
 | Hill Cipher | [Algorithm guide and worked example](Algorithms/Hill/README.md) | [Encryption](Code/Hill-Cipher/hill_encryption.py) · [Decryption](Code/Hill-Cipher/hill_decryption.py) | [Unit tests](Code/Hill-Cipher/tests.py) |
+| Rail Fence Cipher | [Algorithm guide and lecture example](Algorithms/Rail-Fence/README.md) | [Encryption](Code/Rail-Fence-Cipher/rail_fence_encryption.py) · [Decryption](Code/Rail-Fence-Cipher/rail_fence_decryption.py) | [Unit tests](Code/Rail-Fence-Cipher/tests.py) |
 
 For additional code details, see the [Caesar](Code/Caesar-Cipher/README.md),
 [Vigenère](Code/Vigenere-Cipher/README.md), [Playfair](Code/Playfair-Cipher/README.md),
@@ -114,6 +121,8 @@ python Code/Vigenere-Cipher/vigenere_section.py
 python Code/Playfair-Cipher/Playfair-Cipher.py
 python Code/Hill-Cipher/hill_encryption.py
 python Code/Hill-Cipher/hill_decryption.py
+python Code/Rail-Fence-Cipher/rail_fence_encryption.py
+python Code/Rail-Fence-Cipher/rail_fence_decryption.py
 ```
 
 Vigenère's function-based scripts can be imported from Python; they do not
@@ -128,6 +137,7 @@ Run the available test/check scripts from the repository root:
 python Code/Caesar-Cipher/tests.py
 python Code/Vigenere-Cipher/tests.py
 python -m unittest discover -s Code/Hill-Cipher -p tests.py
+python -m unittest discover -s Code/Rail-Fence-Cipher -p tests.py
 ```
 
 The Caesar and Vigenère scripts print expected and actual values for manual
