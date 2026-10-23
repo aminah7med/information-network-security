@@ -55,6 +55,10 @@ class HillCipherTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "English letters"):
             encrypt("HELLO!", self.key)
 
+    def test_rejects_non_ascii_letters(self):
+        with self.assertRaisesRegex(ValueError, "English letters"):
+            encrypt("HELLOß", self.key)
+
 
 if __name__ == "__main__":
     unittest.main()
