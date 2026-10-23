@@ -49,7 +49,10 @@ def encrypt(plaintext, key_matrix):
 
     ciphertext = []
     for start in range(0, len(plaintext), dimension):
-        block = [ord(letter) - ord("A") for letter in plaintext[start:start + dimension]]
+        block = [
+            ord(letter) - ord("A")
+            for letter in plaintext[start:start + dimension]
+        ]
         for row in key_matrix:
             value = sum(key_value * letter for key_value, letter in zip(row, block))
             ciphertext.append(chr((value % MODULUS) + ord("A")))

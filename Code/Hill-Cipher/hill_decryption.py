@@ -2,7 +2,12 @@
 
 from math import gcd
 
-from hill_encryption import MODULUS, normalize_text, read_key_matrix, validate_key_matrix
+from hill_encryption import (
+    MODULUS,
+    normalize_text,
+    read_key_matrix,
+    validate_key_matrix,
+)
 
 
 def determinant(matrix):
@@ -83,7 +88,10 @@ def decrypt(ciphertext, key_matrix):
     inverse_matrix = inverse_key_matrix(key_matrix)
     plaintext = []
     for start in range(0, len(ciphertext), dimension):
-        block = [ord(letter) - ord("A") for letter in ciphertext[start:start + dimension]]
+        block = [
+            ord(letter) - ord("A")
+            for letter in ciphertext[start:start + dimension]
+        ]
         for row in inverse_matrix:
             value = sum(key_value * letter for key_value, letter in zip(row, block))
             plaintext.append(chr((value % MODULUS) + ord("A")))
