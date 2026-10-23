@@ -14,11 +14,23 @@ class HillCipherTests(unittest.TestCase):
     def test_known_example_decryption(self):
         self.assertEqual(decrypt("HIAT", self.key), "HELP")
 
+    def test_three_by_three_example(self):
+        key = [[6, 24, 1], [13, 16, 10], [20, 17, 15]]
+        ciphertext = encrypt("ACT", key)
+        self.assertEqual(ciphertext, "POH")
+        self.assertEqual(decrypt(ciphertext, key), "ACT")
+
     def test_round_trip_with_padding(self):
         prepared_plaintext = "CATX"
         ciphertext = encrypt("CAT", self.key)
         self.assertEqual(len(ciphertext) % len(self.key), 0)
         self.assertEqual(decrypt(ciphertext, self.key), prepared_plaintext)
+
+    def test_one_by_one_key(self):
+        key = [[3]]
+        ciphertext = encrypt("Z", key)
+        self.assertEqual(ciphertext, "X")
+        self.assertEqual(decrypt(ciphertext, key), "Z")
 
     def test_encryption_is_case_insensitive(self):
         self.assertEqual(encrypt("help", self.key), "HIAT")
