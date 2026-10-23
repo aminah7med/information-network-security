@@ -30,11 +30,11 @@ def encrypt(plaintext, key):
 
         row += direction
 
-    ciphertext = ""
+    ciphertext = []
     for rail in rails:
-        ciphertext += "".join(rail)
+        ciphertext.append("".join(rail))
 
-    return ciphertext
+    return "".join(ciphertext)
 
 
 if __name__ == "__main__":
