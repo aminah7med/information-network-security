@@ -75,6 +75,7 @@ Thank you for helping make these materials better for everyone.
 - Caesar Cipher
 - Vigenère Cipher
 - Playfair Cipher
+- Hill Cipher
 
 ## Lectures
 
@@ -91,12 +92,14 @@ Thank you for helping make these materials better for everyone.
 - [Caesar Cipher](Algorithms/Caesar/notes.md)
 - [Vigenère Cipher](Algorithms/Vigenere/notes.md)
 - [Playfair Cipher](Algorithms/Playfair/notes.md)
+- [Hill Cipher](Algorithms/Hill/README.md)
 
 ## Code
 
 - [Caesar Cipher](Code/Caesar-Cipher/README.md)
 - [Vigenère Cipher](Code/Vigenere-Cipher/README.md)
 - [Playfair Cipher](Code/Playfair-Cipher/README.md)
+- [Hill Cipher](Code/Hill-Cipher/README.md)
 
 ## Problems & Solutions
 
