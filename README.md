@@ -25,6 +25,8 @@ Algorithms/
 ├── README.md
 ├── Caesar/
 │   └── notes.md
+├── Columnar-Transposition/
+│   └── README.md
 ├── Hill/
 │   └── README.md
 ├── Playfair/
@@ -40,6 +42,10 @@ Code/
 │   ├── README.md
 │   ├── caesar_encryption.py
 │   ├── caesar_decryption.py
+│   └── tests.py
+├── Columnar-Transposition/
+│   ├── columnar_encryption.py
+│   ├── columnar_decryption.py
 │   └── tests.py
 ├── Hill-Cipher/
 │   ├── README.md
@@ -94,6 +100,7 @@ currently a Hill problem or solution folder.
 | Playfair Cipher | [Algorithm notes](Algorithms/Playfair/notes.md) | [Encryption script](Code/Playfair-Cipher/Playfair-Cipher.py) | No test file is currently provided |
 | Hill Cipher | [Algorithm guide and worked example](Algorithms/Hill/README.md) | [Encryption](Code/Hill-Cipher/hill_encryption.py) · [Decryption](Code/Hill-Cipher/hill_decryption.py) | [Unit tests](Code/Hill-Cipher/tests.py) |
 | Rail Fence Cipher | [Algorithm guide and lecture example](Algorithms/Rail-Fence/README.md) | [Encryption](Code/Rail-Fence-Cipher/rail_fence_encryption.py) · [Decryption](Code/Rail-Fence-Cipher/rail_fence_decryption.py) | [Unit tests](Code/Rail-Fence-Cipher/tests.py) |
+| Columnar Transposition Cipher | [Algorithm guide and worked examples](Algorithms/Columnar-Transposition/README.md) | [Encryption](Code/Columnar-Transposition/columnar_encryption.py) · [Decryption](Code/Columnar-Transposition/columnar_decryption.py) | [Unit tests](Code/Columnar-Transposition/tests.py) |
 
 For additional code details, see the [Caesar](Code/Caesar-Cipher/README.md),
 [Vigenère](Code/Vigenere-Cipher/README.md), [Playfair](Code/Playfair-Cipher/README.md),
@@ -123,6 +130,8 @@ python Code/Hill-Cipher/hill_encryption.py
 python Code/Hill-Cipher/hill_decryption.py
 python Code/Rail-Fence-Cipher/rail_fence_encryption.py
 python Code/Rail-Fence-Cipher/rail_fence_decryption.py
+python Code/Columnar-Transposition/columnar_encryption.py
+python Code/Columnar-Transposition/columnar_decryption.py
 ```
 
 Vigenère's function-based scripts can be imported from Python; they do not
@@ -138,6 +147,7 @@ python Code/Caesar-Cipher/tests.py
 python Code/Vigenere-Cipher/tests.py
 python -m unittest discover -s Code/Hill-Cipher -p tests.py
 python -m unittest discover -s Code/Rail-Fence-Cipher -p tests.py
+python -m unittest discover -s Code/Columnar-Transposition -p tests.py
 ```
 
 The Caesar and Vigenère scripts print expected and actual values for manual
