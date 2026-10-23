@@ -125,16 +125,13 @@ The supplementary files are practice implementations. They are not the instructo
 | `hello` | `key` | `rijvs` |
 | `attackatdawn` | `lemon` | `lxfopvefrnhr` |
 
-What `tests.py` checks:
+The available `tests.py` is a print-based script, not a `unittest` suite. It
+checks encryption of `cat` with key `dog` (`foz`), decryption back to `cat`,
+and key repetition for `hello` with key `key` (`keyke`). Run it with:
 
-- The four encryption cases above, and the matching decryption cases.
-- Key repetition: `hello` with `key` equals `hello` with `keyke`.
-- Round trip: decrypting an encrypted message with the same key gives the original plaintext.
-- Wrap-around in decryption: `a` with key `d` gives `x`.
-- Input validation of the supplementary functions (empty key, uppercase, space, digit in key).
-- The instructor's script gives the same ciphertext as `encrypt()`.
-
-Result of the last run (9 tests): `OK`.
+```bash
+python Code/Vigenere-Cipher/tests.py
+```
 
 ## H. Limitations
 

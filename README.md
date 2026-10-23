@@ -22,30 +22,56 @@ and tests are in `Code/`.
 
 ```text
 Algorithms/
-├── Caesar/notes.md
-├── Hill/README.md
-├── Playfair/notes.md
-└── Vigenere/{notes.md, study-guide.md}
+├── README.md
+├── Caesar/
+│   └── notes.md
+├── Hill/
+│   └── README.md
+├── Playfair/
+│   └── notes.md
+└── Vigenere/
+    ├── notes.md
+    └── study-guide.md
 Code/
-├── Caesar-Cipher/{README.md, caesar_encryption.py, caesar_decryption.py, tests.py}
-├── Hill-Cipher/{README.md, hill_encryption.py, hill_decryption.py, tests.py}
-├── Playfair-Cipher/{README.md, Playfair-Cipher.py}
-└── Vigenere-Cipher/{README.md, vigenere_section.py, vigenere_encryption.py,
-                     vigenere_decryption.py, tests.py}
+├── README.md
+├── Caesar-Cipher/
+│   ├── README.md
+│   ├── caesar_encryption.py
+│   ├── caesar_decryption.py
+│   └── tests.py
+├── Hill-Cipher/
+│   ├── README.md
+│   ├── hill_encryption.py
+│   ├── hill_decryption.py
+│   └── tests.py
+├── Playfair-Cipher/
+│   ├── README.md
+│   └── Playfair-Cipher.py
+└── Vigenere-Cipher/
+    ├── README.md
+    ├── vigenere_section.py
+    ├── vigenere_encryption.py
+    ├── vigenere_decryption.py
+    └── tests.py
 Lectures/
-├── Lec-01/ (notes, study guide, source scan, images guide)
-├── Lec-02/ (notes, study guide, source scan, images guide)
-└── Lec-03/ (notes, study guide, images)
+├── README.md
+├── Lec-01/ (notes.md, study-guide.md, images/README.md, source/Lec-01.pdf)
+├── Lec-02/ (notes.md, study-guide.md, images/README.md, source/Lec-02.pdf)
+└── Lec-03/ (notes.md, study-guide.md, images/README.md, images/1.png, images/2.png, images/3.png)
 Problems/
-├── Caesar/
-├── Encryption/
-├── Playfair/
-└── Vigenere/
-Resources/ (README.md and course reference PDF)
+├── README.md
+├── Caesar/README.md
+├── Encryption/README.md
+├── Playfair/README.md
+└── Vigenere/README.md
+Resources/
+├── README.md
+└── William Stallings-Cryptography and Network Security_ Principles and Practice (6th Edition).pdf
 Solutions/
-├── Caesar/
-├── Playfair/
-└── Vigenere/
+├── README.md
+├── Caesar/README.md
+├── Playfair/README.md
+└── Vigenere/README.md
 Progress.md
 ```
 
