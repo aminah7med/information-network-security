@@ -1,7 +1,5 @@
 """Hill Cipher encryption using A = 0 through Z = 25."""
 
-from math import gcd
-
 
 MODULUS = 26
 
@@ -33,11 +31,13 @@ def normalize_text(text, label):
     if not isinstance(text, str):
         raise ValueError(f"{label} must be a string.")
 
-    normalized = text.upper()
-    if any(not "A" <= character <= "Z" for character in normalized):
+    if any(
+        not ("A" <= character <= "Z" or "a" <= character <= "z")
+        for character in text
+    ):
         raise ValueError(f"{label} must contain only English letters A through Z.")
 
-    return normalized
+    return text.upper()
 
 
 def encrypt(plaintext, key_matrix):
