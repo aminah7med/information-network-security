@@ -1,19 +1,31 @@
 # Vigenère Cipher Code
 
 [`vigenere_encryption.py`](vigenere_encryption.py) is the original lecture
-encryption script. It reads the plaintext and key, converts both to uppercase,
-repeats the key to match the message length, and prints the ciphertext.
+script. It reads plaintext and key, uppercases both, repeats the key, and
+prints the ciphertext. It expects alphabetic input and a non-empty key; the
+lecture script does not validate input.
 
-The lecture script expects alphabetic input and a non-empty key; it does not
-validate unsupported characters. No corresponding original lecture
-decryption code or test file was found. Earlier supplementary encryption,
-decryption, and test scripts have been removed rather than presented as
-lecture implementations.
+The folder also retains supplementary variants from the previous code
+organization:
 
-Run the script from the repository root:
+| File | Purpose |
+|------|---------|
+| `vigenere_section.py` | Lowercase reference script |
+| `vigenere_decryption.py` | Lowercase supplementary decryption script |
+| `tests_supplementary.py` | Print-based checks for the lowercase example |
+
+These supplementary files are not the original root lecture script. Run the
+lecture encryption script from the repository root:
 
 ```bash
 python Code/Vigenere-Cipher/vigenere_encryption.py
+```
+
+Run the lowercase demonstration or checks with:
+
+```bash
+python Code/Vigenere-Cipher/vigenere_section.py
+python Code/Vigenere-Cipher/tests_supplementary.py
 ```
 
 Related: [algorithm notes](../../Algorithms/Vigenere/notes.md),
