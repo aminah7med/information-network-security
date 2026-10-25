@@ -129,7 +129,7 @@ For input validation, see the supplementary [encryption implementation](../../Co
 
 ## Related Files
 
-- [Overview](README.md)
+- [Algorithm notes](notes.md)
 - [Lecture notes](notes.md)
 - [Code documentation](../../Code/Vigenere-Cipher/README.md)
 - [Problems](../../Problems/Vigenere/README.md) and [Solutions](../../Solutions/Vigenere/README.md)

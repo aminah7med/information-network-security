@@ -66,9 +66,11 @@ those groups. This is the two-rail zigzag pattern because a two-rail path
 alternates between the top and bottom rails.
 
 The script does not accept a rail-count key or arbitrary input. No original
-lecture decryption implementation was found. The broader key-based algorithm
-described above is the general Rail Fence method; it should not be confused
-with features available in this lecture script.
+lecture decryption implementation was found. A separate
+[supplementary general encryption/decryption implementation](../../Code/Rail-Fence-Cipher/rail_fence_encryption_supplementary.py)
+and [its tests](../../Code/Rail-Fence-Cipher/tests_supplementary.py) are
+retained. The broader key-based algorithm described above is the general Rail
+Fence method; it should not be confused with features in the lecture script.
 
 Run the hard-coded example from the repository root:
 

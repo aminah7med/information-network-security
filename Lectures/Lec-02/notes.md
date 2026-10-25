@@ -99,6 +99,6 @@ The supplied lecture material contains the formula and the code, but no worked n
 
 ## Related Files
 
-- [Overview](README.md)
+- [Vigenere algorithm notes](../../Algorithms/Vigenere/notes.md)
 - [Study guide](study-guide.md)
 - [Original Vigenere lecture code](../../Code/Vigenere-Cipher/vigenere_encryption.py)
