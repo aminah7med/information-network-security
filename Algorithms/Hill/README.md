@@ -13,8 +13,9 @@ Convert each uppercase English letter to a number:
 A = 0, B = 1, ..., Z = 25
 ```
 
-The implementation ignores letter case and accepts only ASCII letters
-`A` through `Z`. Remove spaces and punctuation before using it. The plaintext
+The supplementary function-based implementation ignores letter case and
+accepts only ASCII letters `A` through `Z`. Remove spaces and punctuation
+before using that implementation. The plaintext
 is divided into blocks whose length equals the key matrix dimension. If the
 last block is short, append `X` (value 23) until it is full. Decryption keeps
 this padding; remove the known padding from the result when appropriate.
@@ -117,6 +118,6 @@ tests. It is not the lecture source.
 
 The Hill Cipher is a classical cipher, not secure for modern use. It is
 vulnerable to known-plaintext attacks, and its linear transformation leaks
-patterns when enough plaintext/ciphertext is available. This implementation
-is educational: it handles only English letters, uses a fixed `X` padding
-convention, and does not preserve spaces or punctuation.
+patterns when enough plaintext/ciphertext is available. The supplementary
+implementation is educational: it handles only English letters, uses a
+fixed `X` padding convention, and does not preserve spaces or punctuation.

@@ -141,9 +141,9 @@ python Code/Rail-Fence-Cipher/rail_fence_encryption.py
 python Code/Complex-Scheme/complex_scheme.py
 ```
 
-Vigenère's function-based scripts can be imported from Python; they do not
-start an interactive session when run directly. On some systems, use
-`python3` instead of `python`.
+Interactive lecture scripts prompt for input; the Rail Fence and Complex
+Scheme lecture examples run their fixed demonstrations directly. On some
+systems, use `python3` instead of `python`.
 
 ## Testing
 

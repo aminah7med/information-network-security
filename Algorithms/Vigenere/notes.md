@@ -1,8 +1,3 @@
-# Vigenere Cipher Algorithm
-
-No Vigenere algorithm material has been transcribed or verified from the lecture sources yet. This file remains a placeholder until supporting course material is reviewed.
-
-Related: [code](../../Code/Vigenere-Cipher/README.md), [problems](../../Problems/Vigenere/README.md), and [solutions](../../Solutions/Vigenere/README.md).
 # Vigenère Cipher
 
 The Vigenère Cipher is a classical **polyalphabetic substitution cipher**. It encrypts a message with a **keyword** instead of a single number. Each plaintext letter is shifted by an amount that depends on the corresponding letter of the keyword, so the same plaintext letter can produce different ciphertext letters.
@@ -20,7 +15,11 @@ This page is a short entry point. The details are in the linked files.
 
 ## Letter-to-Number Convention
 
-The reference code uses lowercase letters with `a = 0` through `z = 25` (`ord(character) - 97`).
+The original lecture script uses uppercase letters with `A = 0` through
+`Z = 25` (`ord(character) - 65`). The retained lowercase reference script
+uses `a = 0` through `z = 25` (`ord(character) - 97`); both use the same
+modular formula. The lowercase mapping table and workflow below describe
+the retained lowercase reference script.
 
 | a | b | c | d | e | f | g | h | i | j | k | l | m |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -32,7 +31,7 @@ The reference code uses lowercase letters with `a = 0` through `z = 25` (`ord(ch
 
 ## Formulas
 
-Encryption (written on the whiteboard as `C = (P + K) % 26`):
+Encryption (shown in the lecture code as `C = (P + K) % 26`):
 
 ```text
 C_i = (P_i + K_i) mod 26
@@ -76,8 +75,8 @@ ciphertext
 
 | Resource | Purpose |
 |----------|---------|
-| [notes.md](notes.md) | Lecture notes: formula and the instructor's code workflow |
-| [study-guide.md](study-guide.md) | Supplementary line-by-line explanation of the lecture code |
+| [notes.md](notes.md) | Algorithm notes and formula |
+| [study-guide.md](study-guide.md) | Supplementary line-by-line explanation of the lowercase reference code |
 | [Code documentation](../../Code/Vigenere-Cipher/README.md) | How to read, run, and test the code |
 | [Original lecture code](../../Code/Vigenere-Cipher/vigenere_encryption.py) | Uppercase encryption script |
 | [Lowercase section variant](../../Code/Vigenere-Cipher/vigenere_section.py) | Retained reference script |
@@ -89,7 +88,8 @@ ciphertext
 | Content | Source |
 |---------|--------|
 | Encryption formula `C = (P + K) % 26` | Lecture |
-| Reference Python code and its workflow | Lecture |
+| Uppercase Python encryption script | Lecture |
+| Lowercase reference code workflow and study guide | Supplementary |
 | Decryption formula and decryption code | Supplementary |
 | Study guide, dry run, tests, problems, solutions | Supplementary |
 

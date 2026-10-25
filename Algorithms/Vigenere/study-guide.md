@@ -1,8 +1,10 @@
 # Vigenère Cipher — Study Guide
 
-> **Supplementary material.** This guide explains the instructor's code in more detail. It is not a transcript of the lecture. The lecture content is in [notes.md](notes.md).
+> **Supplementary material.** This guide explains the retained lowercase
+> reference script. It is not the original uppercase lecture script, which is
+> linked from the [algorithm notes](notes.md).
 
-## The Reference Code
+## Lowercase Reference Code
 
 ```python
 plain = input("Enter the plain text: ")
@@ -115,7 +117,9 @@ In Python, `%` returns a non-negative result for a positive modulus, so `(0 - 3)
 
 ## Limitations of the Demonstrated Implementation
 
-These are limits of the code, not criticism of the lecture. The lecture code is written for the simple case shown in class.
+These are limits of the lowercase reference code explained above. The
+original uppercase lecture script is described separately in the
+[algorithm notes](notes.md).
 
 | Input | What happens |
 |-------|--------------|
@@ -125,7 +129,9 @@ These are limits of the code, not criticism of the lecture. The lecture code is 
 | Non-ASCII characters | Not supported by the `97`-offset approach |
 | Decryption | Not in the root lecture source; see the supplementary [decryption file](../../Code/Vigenere-Cipher/vigenere_decryption.py) |
 
-For input validation, see the supplementary [encryption implementation](../../Code/Vigenere-Cipher/vigenere_encryption.py).
+The original lecture encryption script is
+[vigenere_encryption.py](../../Code/Vigenere-Cipher/vigenere_encryption.py).
+It uses uppercase letters and does not add input validation.
 
 ## Related Files
 
