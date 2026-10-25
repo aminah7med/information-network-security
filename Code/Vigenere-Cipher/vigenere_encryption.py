@@ -1,16 +1,21 @@
+plain = input("Enter the original text: ").upper()
+key = input("Enter the key: ").upper()
 
-# Vigenere Encryption
+cipher = ""
+new_key = ""
 
-plain = input("Enter the plain text: ").lower()
-key = input("Enter the key: ").lower()
 
-ciphertext = ""
 
 for i in range(len(plain)):
-    p = ord(plain[i]) - 97
-    k = ord(key[i % len(key)]) - 97
 
-    c = (p + k) % 26 + 97
-    ciphertext += chr(c)
+    new_key += key[i % len(key)]
+    p = ord(plain[i]) - 65
+    k = ord(new_key[i]) - 65
+    c = ((p + k) % 26) + 65
 
-print("Ciphertext:", ciphertext)
+    cipher += chr(c)
+
+
+print("Plain Text :", plain)
+print("Key        :", key)
+print("Cipher Text:", cipher)

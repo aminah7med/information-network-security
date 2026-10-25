@@ -1,17 +1,16 @@
-
-# Caesar Encryption
-
-plaintext = input("Enter the plaintext: ").upper()
+plain = input("Enter the original text: ").upper()
 key = int(input("Enter the key: "))
 
-ciphertext = ""
 
-for i in plaintext:
-    if i.isalpha():
-        p = ord(i) - 65
-        c = (p + key) % 26 + 65
-        ciphertext += chr(c)
+cipher = ""
+
+for char in plain:
+    if char.isalpha():
+        p = ord(char) - 65
+        c = (p + key) % 26
+        cipher += chr(c + 65)
     else:
-        ciphertext += i
+        cipher += char
 
-print("Ciphertext:", ciphertext)
+print("Plain Text  :", plain)
+print("Cipher Text :", cipher)
