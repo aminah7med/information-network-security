@@ -123,7 +123,7 @@ These are limits of the code, not criticism of the lecture. The lecture code is 
 | Spaces and punctuation | They are converted to numbers like letters, so a space becomes a letter in the output. For example, `hi there` with key `key` gives `rmldlcbi`, and the space turned into `l` |
 | Empty key | `i % len(key)` raises `ZeroDivisionError` |
 | Non-ASCII characters | Not supported by the `97`-offset approach |
-| Decryption | Not provided; see the supplementary [decryption file](../../Code/Vigenere-Cipher/vigenere_decryption.py) |
+| Decryption | Not in the root lecture source; see the supplementary [decryption file](../../Code/Vigenere-Cipher/vigenere_decryption.py) |
 
 For input validation, see the supplementary [encryption implementation](../../Code/Vigenere-Cipher/vigenere_encryption.py).
 

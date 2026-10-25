@@ -79,7 +79,8 @@ ciphertext
 | [notes.md](notes.md) | Lecture notes: formula and the instructor's code workflow |
 | [study-guide.md](study-guide.md) | Supplementary line-by-line explanation of the lecture code |
 | [Code documentation](../../Code/Vigenere-Cipher/README.md) | How to read, run, and test the code |
-| [Instructor's section code](../../Code/Vigenere-Cipher/vigenere_section.py) | Reference implementation |
+| [Original lecture code](../../Code/Vigenere-Cipher/vigenere_encryption.py) | Uppercase encryption script |
+| [Lowercase section variant](../../Code/Vigenere-Cipher/vigenere_section.py) | Retained reference script |
 | [Problems](../../Problems/Vigenere/README.md) | Supplementary practice problems |
 | [Solutions](../../Solutions/Vigenere/README.md) | Worked solutions to the practice problems |
 

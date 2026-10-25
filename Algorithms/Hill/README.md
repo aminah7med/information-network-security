@@ -95,22 +95,23 @@ Applying this inverse to `HI` (`|7, 8|ᵀ`) gives `HE`; applying it to `AT`
 
 The inverse calculation uses the determinant, its modular inverse, and the
 transposed cofactor matrix (the adjugate), with all results reduced modulo 26.
-The implementation rejects non-square keys and keys whose determinant is
-not coprime to 26 before decrypting.
+The supplementary implementation rejects non-square keys and keys whose
+determinant is not coprime to 26 before decrypting.
 
 ## Run the Python Code
 
-Run commands from the repository root. The scripts prompt for a message and a
-key matrix, entered as comma-separated rows (for example, `3,3;2,5`):
+The original lecture script uses NumPy, prompts for a lowercase message and a
+square matrix dimension, then prompts for each integer matrix entry. Install
+NumPy and run it from the repository root:
 
 ```bash
+python -m pip install numpy
 python Code/Hill-Cipher/hill_encryption.py
-python Code/Hill-Cipher/hill_decryption.py
-python -m unittest discover -s Code/Hill-Cipher -p tests.py
 ```
 
-See the [code guide](../../Code/Hill-Cipher/README.md) for function usage and
-test details.
+The repository also retains a separate [supplementary function-based
+implementation](../../Code/Hill-Cipher/README.md), including decryption and
+tests. It is not the lecture source.
 
 ## Limitations
 

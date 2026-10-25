@@ -101,4 +101,4 @@ The supplied lecture material contains the formula and the code, but no worked n
 
 - [Overview](README.md)
 - [Study guide](study-guide.md)
-- [Instructor's code](../../Code/Vigenere-Cipher/vigenere_section.py)
+- [Original Vigenere lecture code](../../Code/Vigenere-Cipher/vigenere_encryption.py)

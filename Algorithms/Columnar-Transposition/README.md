@@ -83,7 +83,7 @@ Both results are verified against the implementation and covered by tests.
 
 ## Encryption
 
-The [encryption implementation](../../Code/Columnar-Transposition/columnar_encryption.py)
+The supplementary [encryption implementation](../../Code/Columnar-Transposition/columnar_encryption_supplementary.py)
 follows these steps:
 
 1. Validate that the key is a non-empty sequence of distinct positive
@@ -96,7 +96,7 @@ follows these steps:
 
 ## Decryption
 
-The [decryption implementation](../../Code/Columnar-Transposition/columnar_decryption.py)
+The supplementary [decryption implementation](../../Code/Columnar-Transposition/columnar_decryption_supplementary.py)
 reconstructs the grid without padding:
 
 1. Determine the number of complete rows and the number of cells in the
@@ -135,8 +135,8 @@ The grid, column segments, and output require **O(n + k)** auxiliary space.
 Run from the repository root:
 
 ```bash
-python Code/Columnar-Transposition/columnar_encryption.py
-python Code/Columnar-Transposition/columnar_decryption.py
+python Code/Columnar-Transposition/columnar_encryption_supplementary.py
+python Code/Columnar-Transposition/columnar_decryption_supplementary.py
 ```
 
 At the prompts, enter the plaintext or ciphertext, then the numeric key with
@@ -147,10 +147,10 @@ values separated by spaces.
 Run the standard-library unit tests from the repository root:
 
 ```bash
-python -m unittest discover -s Code/Columnar-Transposition -p tests.py
+python -m unittest discover -s Code/Columnar-Transposition -p tests_supplementary.py
 ```
 
-Tests cover both examples, complete and incomplete rows, whitespace
+The supplementary tests cover both examples, complete and incomplete rows, whitespace
 normalization, round trips, a one-column key, empty text, and invalid keys
 and text values.
 
