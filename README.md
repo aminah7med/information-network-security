@@ -44,27 +44,35 @@ Code/
 │   ├── caesar_decryption.py
 │   └── tests.py
 ├── Columnar-Transposition/
-│   ├── columnar_encryption.py
-│   ├── columnar_decryption.py
-│   └── tests.py
+│   ├── README.md
+│   ├── columnar_encryption_supplementary.py
+│   ├── columnar_decryption_supplementary.py
+│   └── tests_supplementary.py
+├── Complex-Scheme/
+│   ├── README.md
+│   └── complex_scheme.py
 ├── Hill-Cipher/
 │   ├── README.md
 │   ├── hill_encryption.py
-│   ├── hill_decryption.py
-│   └── tests.py
+│   ├── hill_encryption_supplementary.py
+│   ├── hill_decryption_supplementary.py
+│   └── tests_supplementary.py
 ├── Playfair-Cipher/
 │   ├── README.md
-│   └── Playfair-Cipher.py
+│   ├── Playfair-Cipher.py
+│   └── Playfair-Cipher-supplementary.py
 ├── Rail-Fence-Cipher/
+│   ├── README.md
 │   ├── rail_fence_encryption.py
-│   ├── rail_fence_decryption.py
-│   └── tests.py
+│   ├── rail_fence_encryption_supplementary.py
+│   ├── rail_fence_decryption_supplementary.py
+│   └── tests_supplementary.py
 └── Vigenere-Cipher/
     ├── README.md
-    ├── vigenere_section.py
     ├── vigenere_encryption.py
+    ├── vigenere_section.py
     ├── vigenere_decryption.py
-    └── tests.py
+    └── tests_supplementary.py
 Lectures/
 ├── README.md
 ├── Lec-01/ (notes.md, study-guide.md, images/README.md, source/Lec-01.pdf)
@@ -95,18 +103,21 @@ currently a Hill problem or solution folder.
 
 | Algorithm | Documentation | Implementation | Tests |
 |---|---|---|---|
-| Caesar Cipher | [Algorithm notes](Algorithms/Caesar/notes.md) | [Encryption](Code/Caesar-Cipher/caesar_encryption.py) · [Decryption](Code/Caesar-Cipher/caesar_decryption.py) | [Console checks](Code/Caesar-Cipher/tests.py) |
-| Vigenère Cipher | [Algorithm notes](Algorithms/Vigenere/notes.md) · [Study guide](Algorithms/Vigenere/study-guide.md) | [Interactive example](Code/Vigenere-Cipher/vigenere_section.py) · [Encryption function](Code/Vigenere-Cipher/vigenere_encryption.py) · [Decryption function](Code/Vigenere-Cipher/vigenere_decryption.py) | [Console checks](Code/Vigenere-Cipher/tests.py) |
-| Playfair Cipher | [Algorithm notes](Algorithms/Playfair/notes.md) | [Encryption script](Code/Playfair-Cipher/Playfair-Cipher.py) | No test file is currently provided |
-| Hill Cipher | [Algorithm guide and worked example](Algorithms/Hill/README.md) | [Encryption](Code/Hill-Cipher/hill_encryption.py) · [Decryption](Code/Hill-Cipher/hill_decryption.py) | [Unit tests](Code/Hill-Cipher/tests.py) |
-| Rail Fence Cipher | [Algorithm guide and lecture example](Algorithms/Rail-Fence/README.md) | [Encryption](Code/Rail-Fence-Cipher/rail_fence_encryption.py) · [Decryption](Code/Rail-Fence-Cipher/rail_fence_decryption.py) | [Unit tests](Code/Rail-Fence-Cipher/tests.py) |
-| Columnar Transposition Cipher | [Algorithm guide and worked examples](Algorithms/Columnar-Transposition/README.md) | [Encryption](Code/Columnar-Transposition/columnar_encryption.py) · [Decryption](Code/Columnar-Transposition/columnar_decryption.py) | [Unit tests](Code/Columnar-Transposition/tests.py) |
+| Caesar Cipher | [Algorithm notes](Algorithms/Caesar/notes.md) | [Lecture encryption](Code/Caesar-Cipher/caesar_encryption.py) · [Supplementary decryption](Code/Caesar-Cipher/caesar_decryption.py) | [Console checks](Code/Caesar-Cipher/tests.py) |
+| Vigenère Cipher | [Algorithm notes](Algorithms/Vigenere/notes.md) · [Study guide](Algorithms/Vigenere/study-guide.md) | [Lecture encryption](Code/Vigenere-Cipher/vigenere_encryption.py) · [Supplementary lowercase version](Code/Vigenere-Cipher/vigenere_section.py) · [Supplementary decryption](Code/Vigenere-Cipher/vigenere_decryption.py) | [Supplementary checks](Code/Vigenere-Cipher/tests_supplementary.py) |
+| Playfair Cipher | [Algorithm notes](Algorithms/Playfair/notes.md) | [Lecture script](Code/Playfair-Cipher/Playfair-Cipher.py) | No test file is currently provided |
+| Hill Cipher | [Algorithm guide](Algorithms/Hill/README.md) | [Lecture encryption](Code/Hill-Cipher/hill_encryption.py) · [Supplementary encryption/decryption](Code/Hill-Cipher/hill_encryption_supplementary.py) | [Supplementary tests](Code/Hill-Cipher/tests_supplementary.py) |
+| Rail Fence Cipher | [Algorithm guide](Algorithms/Rail-Fence/README.md) | [Lecture two-rail example](Code/Rail-Fence-Cipher/rail_fence_encryption.py) · [Supplementary general encryption/decryption](Code/Rail-Fence-Cipher/rail_fence_encryption_supplementary.py) | [Supplementary tests](Code/Rail-Fence-Cipher/tests_supplementary.py) |
+| Columnar Transposition | [Algorithm guide](Algorithms/Columnar-Transposition/README.md) | [Complex Scheme lecture script](Code/Complex-Scheme/complex_scheme.py) · [Supplementary general encryption/decryption](Code/Columnar-Transposition/columnar_encryption_supplementary.py) | [Supplementary tests](Code/Columnar-Transposition/tests_supplementary.py) |
+| Complex Scheme | — | [Lecture script](Code/Complex-Scheme/complex_scheme.py) | No test file is currently provided |
 
 For additional code details, see the [Caesar](Code/Caesar-Cipher/README.md),
 [Vigenère](Code/Vigenere-Cipher/README.md), [Playfair](Code/Playfair-Cipher/README.md),
-and [Hill](Code/Hill-Cipher/README.md) code guides. Vigenère's separate
-encryption and decryption files define functions; the interactive example is
-`vigenere_section.py`. Playfair currently provides encryption only.
+and [Hill](Code/Hill-Cipher/README.md) code guides, plus the [Rail Fence](Code/Rail-Fence-Cipher/README.md),
+[Columnar Transposition](Code/Columnar-Transposition/README.md), and
+[Complex Scheme](Code/Complex-Scheme/README.md) guides. Lecture scripts are
+kept distinct from supplementary implementations; no original lecture
+decryption files were found for Caesar, Vigenère, Hill, or Rail Fence.
 
 ## Getting Started
 
@@ -123,15 +134,11 @@ the repository root, for example:
 
 ```bash
 python Code/Caesar-Cipher/caesar_encryption.py
-python Code/Caesar-Cipher/caesar_decryption.py
-python Code/Vigenere-Cipher/vigenere_section.py
+python Code/Vigenere-Cipher/vigenere_encryption.py
 python Code/Playfair-Cipher/Playfair-Cipher.py
 python Code/Hill-Cipher/hill_encryption.py
-python Code/Hill-Cipher/hill_decryption.py
 python Code/Rail-Fence-Cipher/rail_fence_encryption.py
-python Code/Rail-Fence-Cipher/rail_fence_decryption.py
-python Code/Columnar-Transposition/columnar_encryption.py
-python Code/Columnar-Transposition/columnar_decryption.py
+python Code/Complex-Scheme/complex_scheme.py
 ```
 
 Vigenère's function-based scripts can be imported from Python; they do not
@@ -144,15 +151,16 @@ Run the available test/check scripts from the repository root:
 
 ```bash
 python Code/Caesar-Cipher/tests.py
-python Code/Vigenere-Cipher/tests.py
-python -m unittest discover -s Code/Hill-Cipher -p tests.py
-python -m unittest discover -s Code/Rail-Fence-Cipher -p tests.py
-python -m unittest discover -s Code/Columnar-Transposition -p tests.py
+python Code/Vigenere-Cipher/tests_supplementary.py
+python -m unittest discover -s Code/Hill-Cipher -p tests_supplementary.py
+python -m unittest discover -s Code/Rail-Fence-Cipher -p tests_supplementary.py
+python -m unittest discover -s Code/Columnar-Transposition -p tests_supplementary.py
 ```
 
-The Caesar and Vigenère scripts print expected and actual values for manual
-checks. Hill uses Python's built-in `unittest`. The Playfair folder does not
-currently include a test file.
+The Caesar and Vigenère checks are print-based scripts. Hill, Rail Fence, and
+Columnar tests apply to the separately labeled supplementary implementations,
+not the lecture scripts. The Playfair and Complex Scheme folders do not
+currently include tests. Install NumPy before running the Hill lecture script.
 
 ## Lectures and Learning Resources
 
